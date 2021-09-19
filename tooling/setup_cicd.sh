@@ -1,7 +1,9 @@
+ls -a
 git reset --hard
+ls -a
 pip install -U pip wheel
 pip install pipx
 pipx install copier==6.0.0a7
-copier -f -r 8222c2d
+copier -f -r 219089e
 pip install -r requirements_cicd.txt
 flit install
