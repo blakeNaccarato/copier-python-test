@@ -1,0 +1,19 @@
+# See https://flit.readthedocs.io/en/latest/pyproject_toml.html for more fields.
+
+[build-system]
+requires = ["flit_core >=3.3,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dummy"
+requires-python = ">=3.9"
+dependencies = []
+readme = "README.md"
+authors = [{ name = "Blake Naccarato", email = "dummy@dummy.dummy" }]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://github.com/blakeNaccarato/tooling"
+
+# Workaround for flit 3.3.0 https://github.com/takluyver/flit/issues/432
+[project.optional-dependencies]
