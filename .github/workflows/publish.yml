@@ -15,5 +15,5 @@ jobs:
       - run: bash tooling/setup_cicd.sh
       - run: flit publish
         env:
-          FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
-          FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          FLIT_USERNAME: "@token"
+          FLIT_PASSWORD: ${{ secrets.PYPI_TOKEN }}
