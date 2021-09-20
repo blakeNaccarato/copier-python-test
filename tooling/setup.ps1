@@ -1,4 +1,4 @@
-copier -r 369ec2c
+copier -r d667e39
 py -3.9 -m venv .venv
 .venv/Scripts/activate
 pip install -U pip  # throws [WinError 5], but still works on its own
