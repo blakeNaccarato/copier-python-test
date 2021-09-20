@@ -7,13 +7,14 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-20.04
-    env:
-      FLIT_USERNAME: "@token"
-      FLIT_PASSWORD: ${{ secrets.PYPI_TOKEN }}
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: actions/setup-python@v2.2.2
         with:
           python-version: 3.9
       - run: bash tooling/setup_cicd.sh
-      - run: flit publish
+      - name: flit publish
+        env:
+          FLIT_USERNAME: "@token"
+          FLIT_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: flit publish
